@@ -1,0 +1,79 @@
+/* =====================================================================
+   BERNOVA — estilos de páginas de la tienda (bernova.com.ar)
+   Se carga desde Tienda Nube → Editor de diseño → CSS personalizado
+   con un @import a jsDelivr. Un bloque por página, siempre con prefijo bnv-.
+   ===================================================================== */
+
+/* ===== PÁGINA SHOWROOMS (03/11/2026 — migrado desde GTM) ===== */
+/* Reglas que tocan el tema: solo en la página que tiene .bnv-shw */
+body:has(.bnv-shw){overflow-x:hidden}
+body:has(.bnv-shw) .breadcrumbs,body:has(.bnv-shw) .page-header-title{display:none}
+body:has(.bnv-shw) .section-page-header{display:none}
+body:has(.bnv-shw) #ns-section-page_content{padding-top:0}
+body:has(.bnv-shw) #agenda iframe{width:100%;min-height:560px;border:0}
+body.bnv-noscroll{overflow:hidden}
+/* Página */
+.bnv-shw{width:100%;font-family:'Montserrat',sans-serif;font-weight:400;color:#2B2B2B;text-align:left}
+.bnv-shw .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.bnv-shw h1,.bnv-shw h2,.bnv-shw h3{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:-0.02em;color:#2B2B2B;margin:0}
+.bnv-shw em{font-style:normal;font-weight:500}
+.bnv-shw p{margin:0}
+.bnv-shw ul{margin:0;padding:0}
+.bnv-etiqueta{font-weight:500;letter-spacing:0.3em;text-transform:uppercase;font-size:0.72rem;color:#d8d5ce}
+.bnv-hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;width:100vw;margin-left:calc(50% - 50vw)}
+.bnv-hero>img{position:absolute;top:0;left:0;width:100%;height:100%!important;object-fit:cover;object-position:center 40%!important;margin:0;max-width:none}
+.bnv-hero .velo{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(0,23,68,0.45),rgba(0,23,68,0.62))}
+.bnv-hero .inner{position:relative;z-index:2;padding:80px 20px;max-width:760px}
+.bnv-hero h1{color:#fff;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.08;margin-top:14px}
+.bnv-hero .inner p{color:#f2efe9;margin-top:18px;font-weight:300;font-size:clamp(1rem,2.2vw,1.2rem)}
+.bnv-hero .cta{display:inline-block;margin-top:30px;padding:14px 34px;border:1px solid rgba(255,255,255,0.75);border-radius:999px;color:#fff;text-decoration:none;font-weight:500;font-size:0.95rem;background:rgba(255,255,255,0.08)}
+.bnv-sec{padding:64px 0}
+.bnv-sec-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.bnv-sec-head h2{font-size:clamp(1.8rem,4.5vw,2.5rem)}
+.bnv-sec-head p{margin-top:12px;font-weight:300;color:#555}
+.bnv-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.bnv-cards{grid-template-columns:1fr}}
+.bnv-card{background:#fff;border-radius:18px;padding:34px 30px;box-shadow:0 8px 30px rgba(0,23,68,0.08);display:flex;flex-direction:column}
+.bnv-card .chip{display:inline-block;background:#F4F1EB;color:#B08D5B;border-radius:999px;padding:6px 14px;font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;align-self:flex-start}
+.bnv-card h3{font-size:1.6rem;margin-top:16px}
+.bnv-card .dir{margin-top:4px;color:#666;font-size:0.9rem;font-weight:300}
+.bnv-card ul{list-style:none;margin:22px 0 26px;display:flex;flex-direction:column;gap:12px}
+.bnv-card li{display:flex;gap:10px;align-items:flex-start;font-size:0.92rem}
+.bnv-card li .ic{flex:0 0 auto;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#fff;background:#B08D5B;margin-top:1px}
+.bnv-card li.horario .ic{background:#00257A}
+.bnv-card .btn{margin-top:auto;display:block;text-align:center;background:#00257A;color:#fff;text-decoration:none;padding:15px 10px;border-radius:10px;font-weight:600;font-size:0.95rem}
+.bnv-card .btn:hover{background:#001744}
+.bnv-fotos{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:8px}
+@media(max-width:900px){.bnv-fotos{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.bnv-fotos{grid-template-columns:repeat(2,1fr)}}
+.bnv-foto{border-radius:14px;overflow:hidden;background:#D8D5CE;margin:0}
+.bnv-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;margin:0}
+.bnv-foto .cap{padding:10px 12px;font-size:0.78rem;font-weight:500;color:#00257A;background:#fff}
+.bnv-test{background:#fff;border-radius:18px}
+.bnv-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:860px){.bnv-quotes{grid-template-columns:1fr}}
+.bnv-quote{background:#F4F1EB;border-radius:16px;padding:28px}
+.bnv-quote .qmark{font-size:2.4rem;line-height:1;color:#B08D5B;font-weight:700}
+.bnv-quote p{font-size:0.92rem;font-weight:300;line-height:1.55;margin-top:6px}
+.bnv-quote .who{margin-top:18px;font-weight:600;font-size:0.9rem}
+.bnv-quote .meta{color:#777;font-size:0.78rem;margin-top:2px}
+.bnv-quote .stars{color:#B08D5B;letter-spacing:0.1em;font-size:0.8rem;margin-top:2px}
+.bnv-llegar .fila{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;margin-bottom:56px}
+@media(max-width:820px){.bnv-llegar .fila{grid-template-columns:1fr}}
+.bnv-llegar h3{font-size:1.8rem}
+.bnv-llegar .item{display:flex;gap:12px;margin-top:18px;font-size:0.92rem}
+.bnv-llegar .item .ic{color:#B08D5B;font-size:1rem;line-height:1.4}
+.bnv-llegar .item strong{display:block;font-weight:600}
+.bnv-llegar .item span span{font-weight:300;color:#555;display:block}
+.bnv-llegar a.maps{display:inline-block;margin-top:18px;color:#00257A;font-weight:600;font-size:0.9rem;text-decoration:underline}
+.bnv-llegar .fila>img{width:100%;border-radius:16px;aspect-ratio:16/10;object-fit:cover;box-shadow:0 8px 30px rgba(0,23,68,0.1);margin:0}
+.bnv-cierre{text-align:center;padding:72px 16px 24px}
+.bnv-cierre h2{font-size:clamp(1.8rem,4.5vw,2.4rem)}
+.bnv-cierre p{margin-top:10px;font-weight:300;color:#555}
+/* Ventana del calendario (la abre el script que queda en GTM) */
+.bnv-modal{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:rgba(0,23,68,0.55);display:none;align-items:center;justify-content:center;padding:16px}
+.bnv-modal.on{display:flex}
+.bnv-modal-box{background:#fff;border-radius:18px;width:100%;max-width:980px;height:88vh;max-height:760px;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.bnv-modal-box iframe{width:100%!important;height:100%!important;min-height:0!important;border:0;display:block}
+.bnv-modal-x{position:absolute;top:10px;right:12px;z-index:2;width:38px;height:38px;border-radius:50%;border:0;background:#F4F1EB;color:#2B2B2B;font-size:22px;line-height:38px;cursor:pointer}
+/* ===== FIN PÁGINA SHOWROOMS ===== */
